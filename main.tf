@@ -80,8 +80,6 @@ resource "aws_iam_policy" "lambda_dynamodb_policy" {
           "dynamodb:BatchWriteItem"
         ],
         Effect   = "Allow",
-        #dynamodb table already created.
-        #could recreate the dynamodb later with code or leave it that way
         Resource = "${aws_dynamodb_table.visitCount.arn}"
       }
     ]
