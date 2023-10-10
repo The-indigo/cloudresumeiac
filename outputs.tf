@@ -9,3 +9,9 @@ output "base_url" {
 
   value = aws_apigatewayv2_stage.visitorCountApiGateway.invoke_url
 }
+
+output "dynamodb_table_arn" {
+description = "visitcount dynamodb table arn value."
+
+  value = aws_dynamodb_table.visitCount.arn
+}
